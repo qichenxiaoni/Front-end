@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.main {
+    position: relative;
+}
+
+.item {
+    position: absolute;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    transition: left .3s, top .3s transform .3s;
+}
+
+.item:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background-color .2s;
+}
+
+.disabled:after {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.move-list {
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    margin: 0 auto;
+}
